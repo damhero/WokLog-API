@@ -25,6 +25,7 @@ public class RestaurantService {
     }
 
     public Restaurant addRestaurant(Restaurant restaurant){
+        restaurant.calculateAndUpdateRating();
         return repository.save(restaurant);
     }
 
